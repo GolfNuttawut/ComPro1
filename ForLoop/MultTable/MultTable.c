@@ -2,7 +2,7 @@
 void main(){
     int number;
     scanf("%d", &number);
-    if(number > 0 && number < 99){
+    if(number > 0 && number <= 99){
         for(int i=1;i<=12;i++){
             if(number*12 < 100){
                 printf("%d x %2d = %2d\n", number, i, number*i);
