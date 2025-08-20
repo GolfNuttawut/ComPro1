@@ -6,13 +6,12 @@ void main(){
         int order;
         scanf("%d",&order);
         count += order;
-        if(count <= K*100){
-            printf("%d\n",day);
+        if(count > day*K*100){
+            day = count/(K*100);
+            if(count%(K*100)!=0){
+                day++;
+            }
         }
-        else{
-            day += count/(K*100);
-            count %= K*100;
-            printf("%d\n",day);
-        }
+        printf("%d\n",day);
     }
 }
